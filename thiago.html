@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thiago Gomes Verissimo — Currículo</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent:#0d6efd;
+      --muted:#6c757d;
+      --card-bg:#ffffff;
+      --page-bg:#f8f9fa;
+    }
+    body{
+      background: var(--page-bg);
+      color:#222;
+      font-family: system-ui,-apple-system,"Segoe UI","Roboto","Helvetica","Arial",sans-serif;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    .profile-card{
+      background: linear-gradient(180deg, rgba(13,110,253,0.03), transparent);
+      border: 1px solid rgba(13,110,253,0.08);
+    }
+    .avatar{
+      width:120px;height:120px;border-radius:12px;object-fit:cover;border:3px solid #fff;box-shadow:0 4px 12px rgba(16,24,40,0.06);
+    }
+    .section-title{
+      font-size:0.95rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;
+    }
+    .skill-bar{
+      height:8px;border-radius:999px;background:#e9ecef;overflow:hidden;
+    }
+    .skill-fill{height:100%;background:var(--accent);border-radius:999px;}
+    .badge-role{background:rgba(13,110,253,0.12);color:var(--accent);font-weight:600;border-radius:.5rem;padding:.25rem .5rem;}
+    .nav-pills .nav-link{border-radius:.5rem;}
+    footer{font-size:.85rem;color:var(--muted);padding:2rem 0;}
+    @media (max-width:767px){
+      .avatar{width:96px;height:96px;}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container py-5">
+    <div class="row g-4">
+      <!-- Left column -->
+      <div class="col-lg-4">
+        <div class="p-4 profile-card rounded-3 shadow-sm">
+          <div class="d-flex align-items-center gap-3">
+            <img src="https://avatars.dicebear.com/api/initials/Thiago%20Gomes%20Verissimo.svg" alt="Thiago" class="avatar">
+            <div>
+              <h2 class="h5 mb-0">Thiago Gomes Verissimo</h2>
+              <div class="mt-1"><span class="badge-role">Desenvolvedor</span></div>
+              <p class="text-muted mb-0 mt-2">Full-stack | JavaScript, TypeScript, Node.js, React</p>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <div>
+            <div class="mb-3">
+              <div class="section-title">Contato</div>
+              <ul class="list-unstyled mt-2 mb-0">
+                <li><strong>Email:</strong> <a href="mailto:thiago@example.com">thiago@example.com</a></li>
+                <li><strong>Telefone:</strong> +55 (11) 9XXXX-XXXX</li>
+                <li><strong>Localidade:</strong> São Paulo, Brasil</li>
+                <li><strong>GitHub:</strong> <a href="#" target="_blank">github.com/seuusuario</a></li>
+                <li><strong>LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/seuusuario</a></li>
+              </ul>
+            </div>
+
+            <div class="mb-3">
+              <div class="section-title">Resumo</div>
+              <p class="mt-2 mb-0">Desenvolvedor full-stack com X anos de experiência em construir aplicações web escaláveis, APIs e interfaces de usuário modernas. Paixão por boas práticas, testes e software bem documentado.</p>
+            </div>
+
+            <div class="mb-3">
+              <div class="section-title">Habilidades</div>
+              <div class="mt-2">
+                <div class="mb-2">
+                  <div class="d-flex justify-content-between"><small>JavaScript / TypeScript</small><small>90%</small></div>
+                  <div class="skill-bar mt-1"><div class="skill-fill" style="width:90%"></div></div>
+                </div>
+                <div class="mb-2">
+                  <div class="d-flex justify-content-between"><small>React / Next.js</small><small>85%</small></div>
+                  <div class="skill-bar mt-1"><div class="skill-fill" style="width:85%"></div></div>
+                </div>
+                <div class="mb-2">
+                  <div class="d-flex justify-content-between"><small>Node.js / Express</small><small>80%</small></div>
+                  <div class="skill-bar mt-1"><div class="skill-fill" style="width:80%"></div></div>
+                </div>
+                <div class="mb-2">
+                  <div class="d-flex justify-content-between"><small>Banco de dados (Postgres, Mongo)</small><small>75%</small></div>
+                  <div class="skill-bar mt-1"><div class="skill-fill" style="width:75%"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="section-title">Idiomas</div>
+              <ul class="list-unstyled mt-2 mb-0">
+                <li>Português — Nativo</li>
+                <li>Inglês — Avançado</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column -->
+      <div class="col-lg-8">
+        <div class="p-4 bg-white rounded-3 shadow-sm">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <h3 class="mb-1">Experiência</h3>
+              <p class="text-muted mb-3">Principais cargos recentes</p>
+            </div>
+            <div class="text-end text-muted">
+              <small>Atualizado: 03/06/2026</small>
+            </div>
+          </div>
+
+          <!-- Experience items -->
+          <div class="mb-4">
+            <h5 class="mb-1">Senior Full-stack Developer — Empresa Exemplo</h5>
+            <div class="text-muted mb-2"><small>Jan 2022 — Presente • São Paulo</small></div>
+            <ul>
+              <li>Desenvolvimento de features em React e Next.js com TypeScript.</li>
+              <li>Criação e manutenção de APIs RESTful em Node.js/Express; integração com Postgres.</li>
+              <li>Melhoria de performance e implementação de testes automatizados (Jest, Testing Library).</li>
+            </ul>
+          </div>
+
+          <div class="mb-4">
+            <h5 class="mb-1">Desenvolvedor Back-end — Startup XYZ</h5>
+            <div class="text-muted mb-2"><small>Abr 2019 — Dez 2021 • Remoto</small></div>
+            <ul>
+              <li>Projeto de arquiteturas escaláveis usando microserviços e filas (RabbitMQ).</li>
+              <li>Implementação de CI/CD e monitoramento (GitHub Actions, Prometheus).</li>
+            </ul>
+          </div>
+
+          <hr>
+
+          <div class="mb-4">
+            <h4>Projetos</h4>
+
+            <div class="mb-3">
+              <h6 class="mb-0">Projeto Open Source A</h6>
+              <p class="text-muted small mb-1">Stack: React, Vite, TypeScript</p>
+              <p class="mb-0">Descrição curta do projeto — o que faz, responsabilidades e impacto.</p>
+            </div>
+
+            <div class="mb-3">
+              <h6 class="mb-0">API de Pagamentos B</h6>
+              <p class="text-muted small mb-1">Stack: Node.js, Express, Postgres</p>
+              <p class="mb-0">Descrição curta com destaque para segurança, testes e disponibilidade.</p>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <h4>Formação</h4>
+            <p class="mb-1"><strong>Bacharel em Ciência da Computação</strong> — Universidade Exemplo, 2015–2018</p>
+            <p class="mb-0 text-muted">Cursos e certificações: Certificação X, Curso Y (opcional)</p>
+          </div>
+
+          <div class="mb-4">
+            <h4>Referências</h4>
+            <p class="mb-0">Disponíveis mediante solicitação.</p>
+          </div>
+
+          <div class="d-flex gap-2 mt-3">
+            <a href="#" class="btn btn-primary">Baixar PDF</a>
+            <a href="#" class="btn btn-outline-secondary">Editar</a>
+          </div>
+        </div>
+
+        <footer class="mt-4">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>Thiago Gomes Verissimo — Desenvolvedor</div>
+            <div class="text-muted">© 2026</div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -8,6 +8,8 @@
       margin: 0;
       overflow: hidden;
       background-color: black;
+      /* Prevents accidental mobile refreshing/scrolling while playing */
+      touch-action: none;
     }
     #isaac {
       position: absolute;
@@ -88,12 +90,12 @@
   let gameOver = false;
 
   pauseBtn.addEventListener("click", () => {
-  paused = !paused;
-  pauseBtn.textContent = paused ? "Resume" : "Pause";
-});
+    paused = !paused;
+    pauseBtn.textContent = paused ? "Resume" : "Pause";
+  });
   playAgainBtn.addEventListener("click", () => {
-  location.reload(); // Quick restart
-});
+    location.reload(); // Quick restart
+  });
 
   const bricks = [];
   const brickRows = 4;
@@ -214,6 +216,7 @@
     requestAnimationFrame(updatePaddle);
   }
 
+  // Keyboard controls
   document.addEventListener("keydown", function(e) {
     if (e.key === "ArrowLeft") keys.left = true;
     if (e.key === "ArrowRight") keys.right = true;
@@ -223,6 +226,23 @@
     if (e.key === "ArrowLeft") keys.left = false;
     if (e.key === "ArrowRight") keys.right = false;
   });
+
+  // --- NEW: Mouse & Touch Controls ---
+  function handlePointerMove(e) {
+    if (paused || gameOver) return;
+
+    // Center the paddle perfectly under the cursor or touch point
+    paddleX = e.clientX - paddle.offsetWidth / 2;
+
+    // Keep the paddle within the left and right screen bounds
+    const maxRight = window.innerWidth - paddle.offsetWidth;
+    if (paddleX < 0) paddleX = 0;
+    if (paddleX > maxRight) paddleX = maxRight;
+  }
+
+  // Listeners for moving and clicking/tapping anywhere on the screen
+  document.addEventListener("pointermove", handlePointerMove);
+  document.addEventListener("pointerdown", handlePointerMove);
 
   moveIsaac();
   updatePaddle();

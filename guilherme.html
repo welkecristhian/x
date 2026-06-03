@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Surpresa 😈</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<iframe 
+  src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0&loop=1&playlist=dQw4w9WgXcQ&mute=0"
+  allow="autoplay; fullscreen"
+  allowfullscreen>
+</iframe>
+
+<script>
+  // Tenta forçar volume alto (depende do navegador permitir)
+  document.addEventListener('click', () => {
+    const iframe = document.querySelector('iframe');
+    iframe.src += "&mute=0";
+  });
+</script>
+
+</body>
+</html>
